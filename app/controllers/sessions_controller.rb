@@ -8,13 +8,13 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to user
        else
-        flash[:success] = "Invalid email/password combination"
+       # flash[:success] = "Invalid email/password combination"
         render 'new'
       end
   end
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to signup_path
   end
   
 end

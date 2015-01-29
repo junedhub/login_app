@@ -30,7 +30,7 @@
 		</div>
 		
 		<div class="mb_1">
-		  <form name="frm1">
+		  <%= form_for(:session, url: login_path) do |f| %>
 			<table>
    				<tbody>
 					<tr>
@@ -42,16 +42,16 @@
 
 					<tr>
 					<td>
-					<input class="inputtext" name="email" id="email" value="" tabindex="1" type="text">
+					<%= f.email_field :email, class: 'inputtext' %>
 					</td>
 
 					<td>
-					<input class="inputtext" name="pass" id="pass" tabindex="2" type="password">
+					<%= f.password_field :password, class: 'inputtext' %>
 					</td>
 
 					<td>
 					<label class="uiButton uiButtonConfirm" id="loginbutton" for="u_0_n">
-					<input value="Log In" tabindex="4" id="u_0_n" type="submit">
+					<%= f.submit "Log in", class: "btn btn-primary" %>
 					</label>
 					</td>
 					</tr>
@@ -73,7 +73,7 @@
 					</tr>
 					</tbody>
 				</table>		    
-			  </form>	
+			  <% end -%>	
 
 			</div>
 

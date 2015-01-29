@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+	before_action :logged_in_user, only: [:show]
+	before_action :correct_user, only: [:show]
+
 	def show
   	@user = User.find(params[:id])
   end
@@ -10,6 +13,7 @@ class UsersController < ApplicationController
   def create
   	@registration = User.new(registration_params)
   	if @registration.save
+  	 #log_in @registration
       flash[:success] = "Record Inserted"
   	   redirect_to @registration 
     else
@@ -23,9 +27,14 @@ class UsersController < ApplicationController
       end
      # Confirms a logged-in user.
       def logged_in_user
-         unless logged_in?
+         if not session[:user_id]
           flash[:danger] = "Please log in."
-          redirect_to login_url
+          redirect_to signup_path
          end
        end
+      # Confirms the correct user.
+      def correct_user
+        @user = User.find(params[:id])
+        redirect_to(signup_path) unless @user == current_user
+      end
 end
