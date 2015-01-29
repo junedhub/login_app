@@ -1,0 +1,224 @@
+
+p
+{
+color:white;
+margin-left:100px;
+font-size:21px;
+}
+
+.content1
+{
+float:right;
+margin-top:-250px;
+}
+
+
+button
+{
+    border-radius: 20px;
+    border-color: #79B7DB;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #FFF;
+background-color: #5BC0DE;
+}
+
+.inputFirstNm
+{
+ border-color: #BDC7D8;
+    border-radius: 5px;
+    margin: 0px;
+    height: 30px;
+    width:150px;
+}
+
+.input
+{
+    border-color: #BDC7D8;
+    border-radius: 5px;
+    margin: 0px;
+    height: 30px;
+    width:300px;
+}
+
+body
+{
+      background-color: #EDF0F5;
+}
+
+.content
+{
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+font-size: 11px;
+}
+
+.banner
+{
+
+background-color: #3A5795;
+height: 82px;
+min-width: 980px;
+}
+
+.menubar
+{
+margin: 0px auto;
+padding-top: 13px;
+width: 980px;
+}
+
+.mb_1
+{
+float:right;
+margin-top:-70px;
+}
+
+.fb_logo
+{
+    width: 170px;
+    height: 56px;
+    background-position: 0px -116px;
+    margin-top: 1px;
+}
+
+table tr td {
+    padding: 0px 0px 0px 14px;
+}
+
+.html7magic {
+    padding-bottom: 4px;
+}
+
+.html7magic label {
+    color: #FFF;
+    font-weight: normal;
+    padding-left: 1px;
+}
+
+.inputtext, .menu_login_container .inputpassword {
+    border-color: #1D2A5B;
+    margin: 0px;
+    width: 142px;
+}
+
+.uiButtonConfirm {
+    background-image: url("/rsrc.php/v2/yl/r/bAzFFlgS9H8.png");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position: 0px -49px;
+    background-color: #5B74A8;
+    border-color: #2F477A #29447E #1A356E;
+}
+
+.sideBanner{
+    margin-right: 15.999px !important;
+    width: 565px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.frnds
+{
+color: #333;
+display: inline-block;
+    font-family: "Freight Sans Bold","lucida grande",tahoma,verdana,arial,sans-serif !important;
+    font-weight: normal !important;
+    text-rendering: optimizelegibility;
+}
+
+.mtl {
+    margin-top: 20px;
+}
+.pbm {
+    padding-bottom: 10px;
+}
+
+.product_desc {
+    width: 440px;
+margin-top:-10px;
+}
+
+
+._6b {
+    vertical-align: middle;
+      
+
+}
+._6a {
+    display: inline-block;
+}
+
+._6s {
+    color: #333;
+}
+._6p {
+    font-size: 17px;
+    line-height: 22px;
+		
+}
+
+.mlm {
+    margin-left: 10px;
+}
+._mf {
+    font-weight: normal;
+}
+._6t {
+    color: #666;
+}
+._6q {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+._74 {
+    width: 399px;
+float:right;
+margin-top:-400px;
+margin-right:-100px;
+}
+._6_ {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mbs {
+    margin-bottom: 5px;
+}
+
+._6v {
+    font-weight: bold;
+}
+._6s {
+    color: #333;
+}
+._6n {
+    font-size: 23px;
+    line-height: 120%;
+}
+
+._58mh {
+float:right;
+margin-top:-300px;
+    width: 399px;
+}
+
+._58mh ._58mg {
+    width: 172px;
+
+}
+
+.placeholder {
+    font-size: 18px;
+    padding: 8px 10px;
+}
+ ._58mf ._58mg, ._58mf ._58mg, ._58mf .uiStickyPlaceholderInput .placeholder {
+    font-size: 18px;
+    padding: 8px 10px;
+}
+
+._5dbb {
+    position: relative;
+}
