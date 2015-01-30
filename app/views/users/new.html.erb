@@ -3,23 +3,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="hello.css">
 <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-
-
-<script>
-
-  (function ($) {
-    $('.ui.form').form({        
-       {
-      on: 'blur',
-      inline: 'true'
-    });
-  }(jQuery));
-
-</script> 
-
-
-
-
 </head>
 <body>
     <div class="content">
@@ -140,6 +123,12 @@
 </td>
 </tr>
 
+<tr>
+<td>
+<%= f.password_field :password_confirmation, autofocus: true, placeholder: 'Confirm Password', class: 'input' -%>
+</td>
+</tr>
+
 <tr rowspan="2" >
 <td colspan="3">
 <h5>Birthday</h5>
@@ -156,7 +145,7 @@
 
 <tr>
 <td align="center" colspan="2">
-	<%= f.submit "Sign Up"-%>
+	<%= f.submit "Sign Up", class: "btn_submit"-%>
 <!--<button type="submit"  name=" " >Sign Up</button>-->
 </td>
 </tr>

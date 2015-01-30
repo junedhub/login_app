@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-	before_action :logged_in_user, only: [:show]
-	before_action :correct_user, only: [:show]
+	before_action :logged_in_user, only: [:show, :edit]
+	before_action :correct_user, only: [:show, :edit]
 
 	def show
   	@user = User.find(params[:id])
@@ -13,17 +13,31 @@ class UsersController < ApplicationController
   def create
   	@registration = User.new(registration_params)
   	if @registration.save
-  	 #log_in @registration
-      flash[:success] = "Record Inserted"
+  	 log_in @registration
+      flash.now[:success] = "Record Inserted"
   	   redirect_to @registration 
     else
     	render 'new'
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(registration_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  def edit
+    @user_update = User.find(params[:id])
+  end
+
   private
       def registration_params
-         params.require(:user).permit(:name, :email, :dob, :password, :gender, :lastname)
+         params.require(:user).permit(:name, :email, :dob, :password, :gender, :lastname, :password_confimation)
       end
      # Confirms a logged-in user.
       def logged_in_user
