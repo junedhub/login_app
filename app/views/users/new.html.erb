@@ -16,6 +16,7 @@
   }(jQuery));
 
 </script> 
+
 </head>
 <body>
     <div class="content">
@@ -87,7 +88,6 @@
 			</div></div>
 		</div>
 
-
 		<div class="mtl pbm"><div class="_6a _6b mrl" style="text-align: center; width: 55px"><img class="img" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpa1/t39.2365-6/851585_216271631855613_2121533625_n.png" alt="" style="vertical-align: middle"></div><div class="_6a _6b product_desc"><span class="mtl _3ma _6p _6s _6v"> Share what's new </span><span class="mlm _6q _6t _mf"> in your life on your Timeline. </span></div></div>	
 
 <div class="mtl pbm"><div class="_6a _6b mrl" style="text-align: center; width: 55px"><img class="img" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xap1/t39.2365-6/851558_160351450817973_1678868765_n.png" alt="" style="vertical-align: middle"></div><div class="_6a _6b product_desc"><span class="mtl _3ma _6p _6s _6v"> Find more </span><span class="mlm _6q _6t _mf"> of what you're looking for with Graph Search. </span></div></div>
@@ -101,7 +101,6 @@
 			 
 
 		<%= form_for @registration, url: {controller: "users", action: "create"} do |f| -%>
-		
 
 <div class="content1">
 <table align='center' border="0" >
@@ -133,13 +132,18 @@
 </td>
 </tr>
 
+<tr>
+<td>
+<%= f.password_field :password_confirmation, autofocus: true, placeholder: 'Confirm Password', class: 'input' -%>
+</td>
+</tr>
+
 <tr rowspan="2" >
 <td colspan="3">
 <h5>Birthday</h5>
 <%= f.date_select :dob, start_year: 1960 -%><h3 font color="red"><%= display_error(:dob) %></h3>
 </td>
 </tr>
-
 <tr>
 <td>
 <%= f.radio_button :gender, "Female" -%><b>Female</b>
@@ -150,8 +154,8 @@
 
 <tr>
 <td align="center" colspan="2">
-	<%= f.submit "Sign Up"-%>
-<!--<button type="submit"  name=" " >Sign Up</button>-->
+	<%= f.submit "Sign Up", class: "btn_submit"-%>
+
 </td>
 </tr>
 

@@ -17,8 +17,7 @@
 		</div>
 		
 		<div class="mb_1">
-		<p>Home | Profile | <%= link_to "Log out", logout_path, method: "delete" %>
-</p>
+		<p>Home | <%= link_to "Profile", {controller: 'users', action: 'edit', id: @user.id } -%> | <%= link_to "Log out", logout_path, method: "delete" %> </p>
 		
 </div>
 </div>
