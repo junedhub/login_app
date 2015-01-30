@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20150129175910) do
     t.string   "password_digest", limit: 255
     t.date     "dob"
     t.string   "gender",          limit: 255
+<<<<<<< HEAD
     t.string   "lastname",        limit: 255
+=======
+>>>>>>> f6935451c0657867118b4fc332347fafd29e3722
     t.string   "mobileno",        limit: 255
   end
 

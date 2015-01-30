@@ -3,6 +3,20 @@
 <head>
 <link rel="stylesheet" type="text/css" href="hello.css">
 <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+
+<script>
+
+  (function ($) {
+    $('.ui.form').form({        
+       {
+      on: 'blur',
+      inline: 'true'
+    });
+  }(jQuery));
+
+</script> 
+
 </head>
 <body>
     <div class="content">
@@ -74,7 +88,6 @@
 			</div></div>
 		</div>
 
-
 		<div class="mtl pbm"><div class="_6a _6b mrl" style="text-align: center; width: 55px"><img class="img" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpa1/t39.2365-6/851585_216271631855613_2121533625_n.png" alt="" style="vertical-align: middle"></div><div class="_6a _6b product_desc"><span class="mtl _3ma _6p _6s _6v"> Share what's new </span><span class="mlm _6q _6t _mf"> in your life on your Timeline. </span></div></div>	
 
 <div class="mtl pbm"><div class="_6a _6b mrl" style="text-align: center; width: 55px"><img class="img" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xap1/t39.2365-6/851558_160351450817973_1678868765_n.png" alt="" style="vertical-align: middle"></div><div class="_6a _6b product_desc"><span class="mtl _3ma _6p _6s _6v"> Find more </span><span class="mlm _6q _6t _mf"> of what you're looking for with Graph Search. </span></div></div>
@@ -88,26 +101,22 @@
 			 
 
 		<%= form_for @registration, url: {controller: "users", action: "create"} do |f| -%>
-		<% if @registration.errors.any? %>
-		<ul>
-        <% @registration.errors.full_messages.each do |msg| %>
-        <li><%= msg %><li>
-      <% end -%>
-  	</ul>
-    <% end -%>
 
 <div class="content1">
-<table align='center' border="0" cellpadding="10" cellspacing="10">
+<table align='center' border="0" >
 <tr>
 <td>
 	<%= f.text_field :name, autofocus: true, placeholder: 'First Name', class: 'inputFirstNm' -%>
 	<%= f.text_field :lastname, autofocus: true, placeholder: 'Last Name', class: 'inputFirstNm' -%>
 </td>
+  
 </tr>
-
+ <tr><td><h3 font color="red"><%= display_error(:name) %></h3></td>
+ 	<td><h3 font color="red"><%= display_error(:lastname) %></h3></td></tr>
+ 
 <tr>
 <td>
-<%= f.email_field :email, autofocus: true, placeholder: 'Enter E-mail or Mobile Number', class: 'input' -%>
+<%= f.email_field :email, autofocus: true, placeholder: 'Enter E-mail or Mobile Number', class: 'input' -%><h3 font color="red"><%= display_error(:email) %></h3>
 </td>
 </tr>
 
@@ -119,7 +128,7 @@
 
 <tr>
 <td>
-<%= f.password_field :password, autofocus: true, placeholder: 'New Password', class: 'input' -%>
+<%= f.password_field :password, autofocus: true, placeholder: 'New Password', class: 'input' -%><h3 font color="red"><%= display_error(:password) %></h3>
 </td>
 </tr>
 
@@ -132,27 +141,28 @@
 <tr rowspan="2" >
 <td colspan="3">
 <h5>Birthday</h5>
-<%= f.date_select :dob, start_year: 1960 -%>
+<%= f.date_select :dob, start_year: 1960 -%><h3 font color="red"><%= display_error(:dob) %></h3>
 </td>
 </tr>
-
 <tr>
 <td>
 <%= f.radio_button :gender, "Female" -%><b>Female</b>
 <%= f.radio_button :gender, "Male" -%><b>Male</b>
+<h3 font color="red"><%= display_error(:gender) %></h3>
 </td>
 </tr>
 
 <tr>
 <td align="center" colspan="2">
 	<%= f.submit "Sign Up", class: "btn_submit"-%>
-<!--<button type="submit"  name=" " >Sign Up</button>-->
+
 </td>
 </tr>
 
 </div>
 </table>
 <% end -%>
+ 
    </div>
 	</div>
     </div>
