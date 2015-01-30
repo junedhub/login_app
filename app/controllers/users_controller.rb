@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def new
   	@registration = User.new
+    #@err = display_error(:name)
   end
 
   def create
@@ -20,6 +21,9 @@ class UsersController < ApplicationController
     	render 'new'
     end
   end
+      
+
+       
 
   private
       def registration_params
