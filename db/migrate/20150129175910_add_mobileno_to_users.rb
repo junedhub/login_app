@@ -1,4 +1,4 @@
-class AddMobilenoToUsers < ActiveRecord::Migration
+lass AddMobilenoToUsers < ActiveRecord::Migration
   def change
     add_column :users, :mobileno, :string
   end

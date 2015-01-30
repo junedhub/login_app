@@ -7,6 +7,7 @@ Rails.application.routes.draw do  get 'user/show'
   delete 'logout'  => 'sessions#destroy'
   get 'profile_update/:id' => 'users#edit'
   post 'profile_update/:id' => 'users#update'
+  delete 'users/destroy'
 resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
