@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
   	@registration = User.new(registration_params)
   	if @registration.save
-  	 #log_in @registration
+  	 log_in @registration
       flash[:success] = "Record Inserted"
   	   redirect_to @registration 
     else
