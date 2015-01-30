@@ -8,18 +8,23 @@ class UsersController < ApplicationController
 
   def new
   	@registration = User.new
+     
   end
 
   def create
   	@registration = User.new(registration_params)
   	if @registration.save
   	 log_in @registration
-      flash.now[:success] = "Record Inserted"
+      flash[:success] = "Record Inserted"
+       flash.now[:success] = "Record Inserted"
   	   redirect_to @registration 
     else
     	render 'new'
     end
   end
+      
+
+       
 
   def update
     @user = User.find(params[:id])
